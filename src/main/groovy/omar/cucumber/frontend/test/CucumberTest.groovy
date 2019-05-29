@@ -19,8 +19,7 @@ class CucumberTest {
 
         String[] arguments = [
                 "--tags",
-                //"@o2_ui_search, @tlv_ui",
-                "@tlv_ui",
+                "@o2_ui_search, @tlv_ui",
                 "--tags",
                 "~@C2S",
                 '--plugin', "json:src/main/groovy/omar/webapp/reports/json/frontend.json",

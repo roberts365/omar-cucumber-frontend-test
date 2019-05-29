@@ -5,6 +5,8 @@
 build
 
 .idea
-tomcat*
+tomcat.*
 .DS_Store
-gekodriver-mac
+geckodriver-mac
+bin
+reports

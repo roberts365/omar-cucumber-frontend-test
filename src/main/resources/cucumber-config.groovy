@@ -8,16 +8,6 @@ if (!domainName) {
     domainName = "ossim.io"
 }
 
-s3Bucket = System.getenv("TEST_IMAGE_S3_BUCKET")
-if (!s3Bucket) {
-    s3Bucket = "o2-test-data/Standard_test_imagery_set"
-}
-
-s3BucketUrl = System.getenv("TEST_IMAGE_S3_BUCKET_URL")
-if (!s3BucketUrl) {
-    s3BucketUrl = "https://s3.amazonaws.com"
-}
-
 rbtcloudRootDir = System.getenv("RBT_CLOUD_ROOT_DIR")
 if (!rbtcloudRootDir) {
     rbtcloudRootDir = "https://omar-${targetDeployment}.${domainName}"

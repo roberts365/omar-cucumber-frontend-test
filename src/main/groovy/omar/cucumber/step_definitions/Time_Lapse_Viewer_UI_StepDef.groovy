@@ -26,14 +26,14 @@ def chromeBrowser
 buildNumber = System.getenv("BUILD_NUMBER")
 videoPrefix = buildNumber != null ? "${buildNumber}_" : ""
 
-/*
+
 Given(~/^I am starting the tlv ui selenium server$/) {
     ->
         println "Starting remote display..."
         def command = ["Xvfb", ":1", "-screen", "0", "1366x768x24", "-ac"]
         remoteDisplay = command.execute()
         sleep(3000)
-        println "Starting VNC server..."
+        /*println "Starting VNC server..."
         try {
             command = ["x11vnc", "-display", ":1", "-localhost", "-shared", "-forever"]
             command.execute()
@@ -48,8 +48,8 @@ Given(~/^I am starting the tlv ui selenium server$/) {
             sleep(3000)
         } catch (IOException e) {
             println('Starting video recording failed...')
-        }
-}*/
+        }*/
+}
 
 Given(~/^I am creating the tlv browsers$/) {
     ->

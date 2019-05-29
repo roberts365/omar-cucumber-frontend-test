@@ -56,19 +56,22 @@ To run the docker image
 ```
 docker run -p 8080:8080 omar-cucumber-frontend-test:<tag>
 ```
-To run the Fat Jar
+To run the Fat Jar (jars must be at the same level of src directory)
 ```
 java -jar <path to jar>/omar-cucumber-frontend-test-<version>.jar
 ```
 or
 ```
-java  -server -Xms256m -Xmx5400m  -Djava.awt.headless=true  -XX:+CMSClassUnloadingEnabled -XX:+UseGCOverheadLimit -Djava.security.egd=file:/dev/./urandom -Dwebdriver.gecko.driver=geckodriver/mac/geckodriver -jar <path to jar>/omar-cucumber-frontend-test-<version>.jar
+java -server -Xms256m -Xmx5400m -Djava.awt.headless=true -XX:+CMSClassUnloadingEnabled -XX:+UseGCOverheadLimit -Djava.security.egd=file:/dev/./urandom -Dwebdriver.gecko.driver=<path to geckodriver>geckodriver -jar <path to jar>/omar-cucumber-frontend-test-<version>.jar
 ```
 
 ## Openshift Environment Variables
 ### Overides the values in the cucumber config file
 - TARGET_DEPLOYMENT
 - DOMAIN_NAME
-- TEST_IMAGE_S3_BUCKET
-- TEST_IMAGE_S3_BUCKET_URL
 - RBT_CLOUD_ROOT_DIR
+
+## Apps Needed
+- geckodriver (the one in the repo is for Linux evironments)
+- firefox (if you run locally)
+- java (if you run locally)

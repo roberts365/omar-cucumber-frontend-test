@@ -43,16 +43,12 @@ dependencies {
     // https://mvnrepository.com/artifact/com.github.mkolisnyk/cucumber-runner
     compile group: 'com.github.mkolisnyk', name: 'cucumber-runner', version: '1.3.5'
 
-    //compile "org.codehaus.groovy:groovy:2.5.4"
-
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-groovy
     compile group: 'io.cucumber', name: 'cucumber-groovy', version: '4.3.0'
 
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
     testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '4.3.1'
 
-    //testCompile 'junit:junit:4.11'
-    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
     testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.0-M1'
 
     compile "com.amazonaws:aws-java-sdk-sqs:1.11.26"
@@ -66,13 +62,6 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.gebish/geb-core
     compile group: 'org.gebish', name: 'geb-core', version: '2.3.1'
-
-    //runtime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.52.0"
-    //runtime "net.sourceforge.htmlunit:htmlunit:2.18"
-
-    //compile "org.seleniumhq.selenium:selenium-chrome-driver:2.53.1"
-    //compile "org.seleniumhq.selenium:selenium-firefox-driver:2.53.1"
-    //compile "org.seleniumhq.selenium:selenium-support:2.53.1"
 
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-htmlunit-driver
     compile group: 'org.seleniumhq.selenium', name: 'selenium-htmlunit-driver', version: '2.52.0'
@@ -88,8 +77,6 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support
     compile group: 'org.seleniumhq.selenium', name: 'selenium-support', version: '3.141.59'
-
-    //compile "commons-io:commons-io:2.6"
 
     // https://mvnrepository.com/artifact/commons-io/commons-io
     compile group: 'commons-io', name: 'commons-io', version: '2.6'
@@ -137,6 +124,8 @@ run {
     if (runEnvironment == "local")
     {
         environment 'runEnv', 'local'
+    } else{
+        environment 'runEnv', ''
     }
 }
 
@@ -145,22 +134,9 @@ import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
 
 task createDockerfile(type: Dockerfile) {
     dependsOn shadowJar
-    from 'centos:7'
-    //from 'openjdk:8'
+    from "${dockerBaseImage}:${dockerBaseImageTag}"
     label(['maintainer': 'MAXAR'])
-    runCommand('yum -y install java-1.8.0-openjdk bzip2 gtk3 selenium Xvfb vnc x11vnc libXfont libXt Xorg')
-    //runCommand('yum -y install libXt')
-    //runCommand('yum -y install xorg-x11-server-Xvfb')
-    runCommand('yum -y groupinstall "X Window System" "Desktop" "Fonts" "General Purpose Desktop"')
-    /*copyFile('firefox-66.0.5.tar.bz2', '.')
-    runCommand('chmod 777 firefox-66.0.5.tar.bz2')
-    //copyFile('java-1.8.0-openjdk-1.8.0.181-7.b13.el7.x86_64.rpm', '/usr/local')
-    //runCommand('yum -y install /usr/local/java-1.8.0-openjdk-1.8.0.181-7.b13.el7.x86_64.rpm')
-    runCommand('ls -al')
-    runCommand('tar xvjf firefox-66.0.5.tar.bz2')
-    runCommand('mv firefox/ /usr/local/firefox/')
-    runCommand('chmod -R 777 /usr/local/firefox/')
-    runCommand('ln -s /usr/local/firefox/firefox /usr/bin/firefox')*/
+    runCommand('yum -y install java-1.8.0-openjdk firefox selenium Xvfb')
     runCommand('useradd -u 1001 -r -g 0 --create-home -d /home/omar -s /sbin/nologin -c \'Default Application User\' omar')
     runCommand('mkdir /home/omar/build')
     runCommand('mkdir /home/omar/build/classes')
@@ -170,19 +146,13 @@ task createDockerfile(type: Dockerfile) {
     copyFile('groovy', '/home/omar/build/classes')
     copyFile("omar-cucumber-frontend-test-${version}.jar", '/home/omar/')
     copyFile('geckodriver', '/home/omar/')
-    copyFile('firefox-66.0.5.tar.bz2', '/home/omar/')
     runCommand('chown 1001:0 -R /home/omar')
     runCommand('chmod -R 777 /home/omar')
     user('1001')
     workingDir('/home/omar')
-    //runCommand('ls -al')
-    runCommand('tar xvjf firefox-66.0.5.tar.bz2')
-    environmentVariable("PATH",'$PATH:/home/omar/firefox/firefox')
-    //runCommand('Xvfb :1 -screen 0 1366x768x16 &')
-    runCommand('Xvfb :1 -ac &')
     environmentVariable("DISPLAY",':1')
     exposePort(8080)
-    defaultCommand('java', '-server', '-Xms256m', '-Xmx1024m', '-Djava.awt.headless=true', '-XX:+CMSClassUnloadingEnabled', '-XX:+UseGCOverheadLimit', '-Djava.security.egd=file:/dev/./urandom', '-Dwebdriver.gecko.driver=geckodriver', '-Dwebdriver.firefox.bin=/home/omar/firefox/firefox', '-jar', "omar-cucumber-frontend-test-${version}.jar")
+    defaultCommand('java', '-server', '-Xms256m', '-Xmx1024m', '-Djava.awt.headless=true', '-XX:+CMSClassUnloadingEnabled', '-XX:+UseGCOverheadLimit', '-Djava.security.egd=file:/dev/./urandom', '-Dwebdriver.gecko.driver=geckodriver', '-jar', "omar-cucumber-frontend-test-${version}.jar")
 }
 
 task copyFile(type: Copy) {
@@ -191,6 +161,7 @@ task copyFile(type: Copy) {
     from 'build/classes'
     from "build/libs/omar-cucumber-frontend-test-${version}.jar"
     from 'geckodriver'
+    from 'docker-entrypoint.sh'
     from 'java/java-1.8.0-openjdk-1.8.0.181-7.b13.el7.x86_64.rpm'
     from 'firefox/firefox-66.0.5.tar.bz2'
     into 'build/docker'

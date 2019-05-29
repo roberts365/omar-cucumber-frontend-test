@@ -7,8 +7,8 @@ Feature: TLVUserInterface
 #    When I search for imagery near Paris, France
 #    Then all images should be within the date range specified
 
-#  Scenario: Start selenium
-#    Given I am starting the tlv ui selenium server
+  Scenario: Start selenium
+    Given I am starting the tlv ui selenium server
 
   Scenario: Start browsers
     Given I am creating the tlv browsers

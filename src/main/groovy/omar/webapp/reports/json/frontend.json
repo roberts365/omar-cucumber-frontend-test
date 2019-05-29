@@ -3,24 +3,24 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2019-05-18T23:38:12.293Z",
-        "line": 13,
-        "name": "Start browsers",
+        "start_timestamp": "2019-05-29T00:50:36.216Z",
+        "line": 10,
+        "name": "Start selenium",
         "description": "",
-        "id": "tlvuserinterface;start-browsers",
+        "id": "tlvuserinterface;start-selenium",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases\n\tat com.google.common.base.Preconditions.checkState(Preconditions.java:842)\n\tat org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)\n\tat org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)\n\tat org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)\n\tat org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)\n\tat org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:147)\n\tat org.openqa.selenium.firefox.FirefoxDriver.\u003cinit\u003e(FirefoxDriver.java:125)\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure1.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:67)\n\tat ✽.I am creating the tlv browsers(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:14)\n",
-              "duration": 144193048,
+              "error_message": "java.io.IOException: Cannot run program \"Xvfb\": error\u003d2, No such file or directory\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure1.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:34)\n\tat ✽.I am starting the tlv ui selenium server(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:11)\nCaused by: java.io.IOException: error\u003d2, No such file or directory\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure1.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:34)\n\tat cucumber.runtime.groovy.GroovyBackend.invoke(GroovyBackend.java:170)\n\tat cucumber.runtime.groovy.GroovyStepDefinition.lambda$execute$0(GroovyStepDefinition.java:69)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.groovy.GroovyStepDefinition.execute(GroovyStepDefinition.java:68)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:46)\n\tat cucumber.runner.Runner.runPickle(Runner.java:49)\n\tat cucumber.runtime.Runtime$1.run(Runtime.java:82)\n\tat cucumber.runtime.Runtime$SameThreadExecutorService.execute(Runtime.java:217)\n\tat cucumber.runtime.Runtime.run(Runtime.java:79)\n\tat cucumber.api.cli.Main.run(Main.java:26)\n\tat cucumber.api.cli.Main.main(Main.java:8)\n\tat cucumber.api.cli.Main$main.call(Unknown Source)\n\tat omar.cucumber.frontend.test.CucumberTest.startTest(CucumberTest.groovy:36)\n\tat omar.cucumber.frontend.test.CucumberTest$startTest.call(Unknown Source)\n\tat omar.cucumber.frontend.test.Application.main(Application.groovy:13)\n",
+              "duration": 23790984,
               "status": "failed"
             },
-            "line": 14,
-            "name": "I am creating the tlv browsers",
+            "line": 11,
+            "name": "I am starting the tlv ui selenium server",
             "match": {
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:53"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:30"
             },
             "keyword": "Given "
           }
@@ -32,7 +32,35 @@
         ]
       },
       {
-        "start_timestamp": "2019-05-18T23:38:12.439Z",
+        "start_timestamp": "2019-05-29T00:50:36.242Z",
+        "line": 13,
+        "name": "Start browsers",
+        "description": "",
+        "id": "tlvuserinterface;start-browsers",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2971473705,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I am creating the tlv browsers",
+            "match": {
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:54"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tlv_ui"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2019-05-29T00:50:39.215Z",
         "line": 16,
         "name": "TLV acquisition date search",
         "description": "",
@@ -42,9 +70,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method go() on null object\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure6.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:248)\n\tat ✽.that I am starting at the TLV home page using Firefox(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:17)\n",
-              "duration": 3572514,
-              "status": "failed"
+              "duration": 1960797353,
+              "status": "passed"
             },
             "line": 17,
             "name": "that I am starting at the TLV home page using Firefox",
@@ -55,14 +82,15 @@
                   "offset": 46
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:234"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:236"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 13159,
-              "status": "skipped"
+              "error_message": "Assertion failed: \n\nassert layers \u003e 0\n       |      |\n       0      false\n\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure18.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:438)\n\tat ✽.I search for imagery near Paris, France(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:18)\n",
+              "duration": 33704156003,
+              "status": "failed"
             },
             "line": 18,
             "name": "I search for imagery near Paris, France",
@@ -73,19 +101,19 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:403"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:405"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2166,
+              "duration": 15442,
               "status": "skipped"
             },
             "line": 19,
             "name": "all images should be within the date range specified",
             "match": {
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:261"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:263"
             },
             "keyword": "Then "
           }
@@ -97,7 +125,7 @@
         ]
       },
       {
-        "start_timestamp": "2019-05-18T23:38:12.445Z",
+        "start_timestamp": "2019-05-29T00:51:14.880Z",
         "line": 33,
         "name": "TLV annotations",
         "description": "",
@@ -107,9 +135,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method go() on null object\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure6.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:248)\n\tat ✽.that I am starting at the TLV home page using Firefox(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:34)\n",
-              "duration": 497226,
-              "status": "failed"
+              "duration": 453563207,
+              "status": "passed"
             },
             "line": 34,
             "name": "that I am starting at the TLV home page using Firefox",
@@ -120,14 +147,14 @@
                   "offset": 46
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:234"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:236"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2858,
-              "status": "skipped"
+              "duration": 13447157396,
+              "status": "passed"
             },
             "line": 35,
             "name": "I search for imagery near Lenah Valley, Australia",
@@ -138,14 +165,14 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:403"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:405"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2095,
-              "status": "skipped"
+              "duration": 8599944075,
+              "status": "passed"
             },
             "line": 36,
             "name": "I add a circle annotation",
@@ -156,14 +183,14 @@
                   "offset": 8
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:86"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:88"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2537,
-              "status": "skipped"
+              "duration": 7549645101,
+              "status": "passed"
             },
             "line": 37,
             "name": "I add a line annotation",
@@ -174,14 +201,14 @@
                   "offset": 8
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:86"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:88"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1994,
-              "status": "skipped"
+              "duration": 7144604328,
+              "status": "passed"
             },
             "line": 38,
             "name": "I add a point annotation",
@@ -192,14 +219,14 @@
                   "offset": 8
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:86"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:88"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2009,
-              "status": "skipped"
+              "duration": 7633494575,
+              "status": "passed"
             },
             "line": 39,
             "name": "I add a polygon annotation",
@@ -210,14 +237,14 @@
                   "offset": 8
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:86"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:88"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2021,
-              "status": "skipped"
+              "duration": 8390472347,
+              "status": "passed"
             },
             "line": 40,
             "name": "I add a rectangle annotation",
@@ -228,14 +255,14 @@
                   "offset": 8
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:86"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:88"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1983,
-              "status": "skipped"
+              "duration": 8481343496,
+              "status": "passed"
             },
             "line": 41,
             "name": "I add a square annotation",
@@ -246,19 +273,19 @@
                   "offset": 8
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:86"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:88"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1962,
-              "status": "skipped"
+              "duration": 13086575,
+              "status": "passed"
             },
             "line": 42,
             "name": "the image displays the annotations",
             "match": {
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:350"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:352"
             },
             "keyword": "Then "
           }
@@ -270,7 +297,7 @@
         ]
       },
       {
-        "start_timestamp": "2019-05-18T23:38:12.445Z",
+        "start_timestamp": "2019-05-29T00:52:16.592Z",
         "line": 52,
         "name": "TLV arrow key controls",
         "description": "",
@@ -280,9 +307,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method go() on null object\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure6.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:248)\n\tat ✽.that I am starting at the TLV home page using Firefox(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:53)\n",
-              "duration": 457378,
-              "status": "failed"
+              "duration": 490336639,
+              "status": "passed"
             },
             "line": 53,
             "name": "that I am starting at the TLV home page using Firefox",
@@ -293,14 +319,15 @@
                   "offset": 46
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:234"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:236"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2570,
-              "status": "skipped"
+              "error_message": "Assertion failed: \n\nassert layers \u003e 0\n       |      |\n       0      false\n\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure18.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:438)\n\tat ✽.I search for imagery near Paris, France(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:54)\n",
+              "duration": 33452392282,
+              "status": "failed"
             },
             "line": 54,
             "name": "I search for imagery near Paris, France",
@@ -311,19 +338,19 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:403"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:405"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2072,
+              "duration": 4372,
               "status": "skipped"
             },
             "line": 55,
             "name": "I can use the arrow keys to cycle through the stack",
             "match": {
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:275"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:277"
             },
             "keyword": "Then "
           }
@@ -335,7 +362,7 @@
         ]
       },
       {
-        "start_timestamp": "2019-05-18T23:38:12.446Z",
+        "start_timestamp": "2019-05-29T00:52:50.534Z",
         "line": 64,
         "name": "TLV delete key control",
         "description": "",
@@ -345,9 +372,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method go() on null object\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure6.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:248)\n\tat ✽.that I am starting at the TLV home page using Firefox(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:65)\n",
-              "duration": 743092,
-              "status": "failed"
+              "duration": 501640885,
+              "status": "passed"
             },
             "line": 65,
             "name": "that I am starting at the TLV home page using Firefox",
@@ -358,14 +384,15 @@
                   "offset": 46
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:234"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:236"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 3932,
-              "status": "skipped"
+              "error_message": "Assertion failed: \n\nassert layers \u003e 0\n       |      |\n       0      false\n\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure18.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:438)\n\tat ✽.I search for imagery near Paris, France(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:66)\n",
+              "duration": 33432933000,
+              "status": "failed"
             },
             "line": 66,
             "name": "I search for imagery near Paris, France",
@@ -376,19 +403,19 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:403"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:405"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2886,
+              "duration": 3871,
               "status": "skipped"
             },
             "line": 67,
             "name": "I can use the delete key to remove an image from the stack",
             "match": {
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:305"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:307"
             },
             "keyword": "Then "
           }
@@ -400,7 +427,7 @@
         ]
       },
       {
-        "start_timestamp": "2019-05-18T23:38:12.448Z",
+        "start_timestamp": "2019-05-29T00:53:24.468Z",
         "line": 83,
         "name": "TLV image adjustments",
         "description": "",
@@ -410,9 +437,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method go() on null object\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure6.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:248)\n\tat ✽.that I am starting at the TLV home page using Firefox(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:84)\n",
-              "duration": 677373,
-              "status": "failed"
+              "duration": 448972290,
+              "status": "passed"
             },
             "line": 84,
             "name": "that I am starting at the TLV home page using Firefox",
@@ -423,14 +449,15 @@
                   "offset": 46
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:234"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:236"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2675,
-              "status": "skipped"
+              "error_message": "Assertion failed: \n\nassert layers \u003e 0\n       |      |\n       0      false\n\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure18.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:438)\n\tat ✽.I search for imagery near Paris, France(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:85)\n",
+              "duration": 33436736570,
+              "status": "failed"
             },
             "line": 85,
             "name": "I search for imagery near Paris, France",
@@ -441,13 +468,13 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:403"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:405"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2074,
+              "duration": 4102,
               "status": "skipped"
             },
             "line": 86,
@@ -459,13 +486,13 @@
                   "offset": 13
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:165"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:167"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 2078,
+              "duration": 2723,
               "status": "skipped"
             },
             "line": 87,
@@ -477,13 +504,13 @@
                   "offset": 13
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:165"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:167"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1983,
+              "duration": 2641,
               "status": "skipped"
             },
             "line": 88,
@@ -495,19 +522,19 @@
                   "offset": 13
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:165"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:167"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1974,
+              "duration": 2632,
               "status": "skipped"
             },
             "line": 93,
             "name": "the layer\u0027s image pixels change",
             "match": {
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:364"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:366"
             },
             "keyword": "Then "
           }
@@ -519,7 +546,7 @@
         ]
       },
       {
-        "start_timestamp": "2019-05-18T23:38:12.449Z",
+        "start_timestamp": "2019-05-29T00:53:58.353Z",
         "line": 102,
         "name": "TLV REST API",
         "description": "",
@@ -529,9 +556,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method go() on null object\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure6.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:248)\n\tat ✽.that I am starting at the TLV home page using Firefox(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:103)\n",
-              "duration": 370473,
-              "status": "failed"
+              "duration": 444400356,
+              "status": "passed"
             },
             "line": 103,
             "name": "that I am starting at the TLV home page using Firefox",
@@ -542,14 +568,14 @@
                   "offset": 46
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:234"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:236"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2543,
-              "status": "skipped"
+              "duration": 406432132,
+              "status": "passed"
             },
             "line": 104,
             "name": "endDay\u003d01, endHour\u003d02, endMinute\u003d03, endMonth\u003d04, endSecond\u003d05, endYear\u003d2010, maxCloudCover\u003d50, maxResults\u003d25, minNiirs\u003d6, startDay\u003d07, startHour\u003d08, startMinute\u003d09, startMonth\u003d10, startSecond\u003d11, startYear\u003d2000 are supplied in the TLV URL",
@@ -560,14 +586,14 @@
                   "offset": 0
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:396"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:398"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1995,
-              "status": "skipped"
+              "duration": 186267290,
+              "status": "passed"
             },
             "line": 105,
             "name": "the search dialog will show a Start Date of 10/07/2000 08:09:11, an End Date of 04/01/2010 02:03:05, a Min. NIIRS of 6, a Max. Cloud Cover of 50, and Max Results of 25",
@@ -594,7 +620,7 @@
                   "offset": 165
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:378"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:380"
             },
             "keyword": "Then "
           }
@@ -606,7 +632,7 @@
         ]
       },
       {
-        "start_timestamp": "2019-05-18T23:38:12.449Z",
+        "start_timestamp": "2019-05-29T00:53:59.391Z",
         "line": 114,
         "name": "TLV search by Decimal Degrees",
         "description": "",
@@ -616,9 +642,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method go() on null object\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure6.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:248)\n\tat ✽.that I am starting at the TLV home page using Firefox(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:115)\n",
-              "duration": 346219,
-              "status": "failed"
+              "duration": 245069234,
+              "status": "passed"
             },
             "line": 115,
             "name": "that I am starting at the TLV home page using Firefox",
@@ -629,14 +654,15 @@
                   "offset": 46
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:234"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:236"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2466,
-              "status": "skipped"
+              "error_message": "Assertion failed: \n\nassert layers \u003e 0\n       |      |\n       0      false\n\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure18.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:438)\n\tat ✽.I search for imagery near -23.591080, 138.980708(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:116)\n",
+              "duration": 33434442030,
+              "status": "failed"
             },
             "line": 116,
             "name": "I search for imagery near -23.591080, 138.980708",
@@ -647,13 +673,13 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:403"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:405"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2053,
+              "duration": 3642,
               "status": "skipped"
             },
             "line": 117,
@@ -665,7 +691,7 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:337"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:339"
             },
             "keyword": "Then "
           }
@@ -677,7 +703,7 @@
         ]
       },
       {
-        "start_timestamp": "2019-05-18T23:38:12.450Z",
+        "start_timestamp": "2019-05-29T00:54:33.069Z",
         "line": 124,
         "name": "TLV search by Degrees Minutes Seconds",
         "description": "",
@@ -687,9 +713,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method go() on null object\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure6.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:248)\n\tat ✽.that I am starting at the TLV home page using Firefox(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:125)\n",
-              "duration": 421795,
-              "status": "failed"
+              "duration": 405162840,
+              "status": "passed"
             },
             "line": 125,
             "name": "that I am starting at the TLV home page using Firefox",
@@ -700,14 +725,15 @@
                   "offset": 46
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:234"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:236"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2741,
-              "status": "skipped"
+              "error_message": "Assertion failed: \n\nassert layers \u003e 0\n       |      |\n       0      false\n\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure18.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:438)\n\tat ✽.I search for imagery near 23° 35\u0027 04.41\" S 138° 59\u0027 57.72\" E(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:126)\n",
+              "duration": 33493668041,
+              "status": "failed"
             },
             "line": 126,
             "name": "I search for imagery near 23° 35\u0027 04.41\" S 138° 59\u0027 57.72\" E",
@@ -718,13 +744,13 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:403"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:405"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2118,
+              "duration": 4026,
               "status": "skipped"
             },
             "line": 127,
@@ -736,7 +762,7 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:337"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:339"
             },
             "keyword": "Then "
           }
@@ -748,7 +774,7 @@
         ]
       },
       {
-        "start_timestamp": "2019-05-18T23:38:12.450Z",
+        "start_timestamp": "2019-05-29T00:55:06.967Z",
         "line": 134,
         "name": "TLV search by MGRS",
         "description": "",
@@ -758,9 +784,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method go() on null object\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure6.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:248)\n\tat ✽.that I am starting at the TLV home page using Firefox(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:135)\n",
-              "duration": 386818,
-              "status": "failed"
+              "duration": 399306314,
+              "status": "passed"
             },
             "line": 135,
             "name": "that I am starting at the TLV home page using Firefox",
@@ -771,14 +796,14 @@
                   "offset": 46
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:234"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:236"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2690,
-              "status": "skipped"
+              "duration": 13424660173,
+              "status": "passed"
             },
             "line": 136,
             "name": "I search for imagery near 55GEN2127254539",
@@ -789,14 +814,14 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:403"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:405"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2065,
-              "status": "skipped"
+              "duration": 72835625,
+              "status": "passed"
             },
             "line": 137,
             "name": "I get images that contain -42.861443, 147.260399",
@@ -807,7 +832,7 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:337"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:339"
             },
             "keyword": "Then "
           }
@@ -819,7 +844,7 @@
         ]
       },
       {
-        "start_timestamp": "2019-05-18T23:38:12.451Z",
+        "start_timestamp": "2019-05-29T00:55:20.864Z",
         "line": 144,
         "name": "TLV search by Placename",
         "description": "",
@@ -829,9 +854,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method go() on null object\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure6.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:248)\n\tat ✽.that I am starting at the TLV home page using Firefox(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:145)\n",
-              "duration": 376405,
-              "status": "failed"
+              "duration": 294135405,
+              "status": "passed"
             },
             "line": 145,
             "name": "that I am starting at the TLV home page using Firefox",
@@ -842,14 +866,15 @@
                   "offset": 46
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:234"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:236"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2427,
-              "status": "skipped"
+              "error_message": "Assertion failed: \n\nassert layers \u003e 0\n       |      |\n       0      false\n\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure18.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:438)\n\tat ✽.I search for imagery near Paris, France(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:146)\n",
+              "duration": 33422749712,
+              "status": "failed"
             },
             "line": 146,
             "name": "I search for imagery near Paris, France",
@@ -860,13 +885,13 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:403"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:405"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2059,
+              "duration": 4220,
               "status": "skipped"
             },
             "line": 147,
@@ -878,7 +903,7 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:337"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:339"
             },
             "keyword": "Then "
           }
@@ -890,7 +915,7 @@
         ]
       },
       {
-        "start_timestamp": "2019-05-18T23:38:12.452Z",
+        "start_timestamp": "2019-05-29T00:55:54.580Z",
         "line": 156,
         "name": "TLV summary table",
         "description": "",
@@ -900,9 +925,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method go() on null object\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure6.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:248)\n\tat ✽.that I am starting at the TLV home page using Firefox(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:157)\n",
-              "duration": 377632,
-              "status": "failed"
+              "duration": 399435678,
+              "status": "passed"
             },
             "line": 157,
             "name": "that I am starting at the TLV home page using Firefox",
@@ -913,14 +937,15 @@
                   "offset": 46
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:234"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:236"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2660,
-              "status": "skipped"
+              "error_message": "Assertion failed: \n\nassert layers \u003e 0\n       |      |\n       0      false\n\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure18.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:438)\n\tat ✽.I search for imagery near Paris, France(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:158)\n",
+              "duration": 33431783612,
+              "status": "failed"
             },
             "line": 158,
             "name": "I search for imagery near Paris, France",
@@ -931,31 +956,31 @@
                   "offset": 26
                 }
               ],
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:403"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:405"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2133,
+              "duration": 3641,
               "status": "skipped"
             },
             "line": 159,
             "name": "I click the Summary Table button",
             "match": {
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:225"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:227"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1946,
+              "duration": 2397,
               "status": "skipped"
             },
             "line": 160,
             "name": "a table appears with the stack\u0027s metadata",
             "match": {
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:255"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:257"
             },
             "keyword": "Then "
           }
@@ -967,7 +992,7 @@
         ]
       },
       {
-        "start_timestamp": "2019-05-18T23:38:12.452Z",
+        "start_timestamp": "2019-05-29T00:56:28.410Z",
         "line": 162,
         "name": "Remove browsers",
         "description": "",
@@ -977,14 +1002,13 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method quit() on null object\n\tat omar.cucumber.step_definitions.Time_Lapse_Viewer_UI_StepDef$_run_closure2.doCall(Time_Lapse_Viewer_UI_StepDef.groovy:83)\n\tat ✽.I am closing the tlv browsers(file:src/main/resources/features/01_Time_Lapse_Viewer_UI.feature:163)\n",
-              "duration": 348243,
-              "status": "failed"
+              "duration": 383528081,
+              "status": "passed"
             },
             "line": 163,
             "name": "I am closing the tlv browsers",
             "match": {
-              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:80"
+              "location": "Time_Lapse_Viewer_UI_StepDef.groovy:82"
             },
             "keyword": "Given "
           }
@@ -1004,79 +1028,6 @@
     "tags": [
       {
         "name": "@tlv_ui",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
-  },
-  {
-    "line": 2,
-    "elements": [
-      {
-        "start_timestamp": "2019-05-18T23:38:12.453Z",
-        "line": 8,
-        "name": "[MAP-01] UI Map Search",
-        "description": "",
-        "id": "o2mapuserinterface;[map-01]-ui-map-search",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke method go() on null object\n\tat omar.cucumber.step_definitions.Image_Search_UI_StepDef$_run_closure1.doCall(Image_Search_UI_StepDef.groovy:47)\n\tat ✽.that I am starting at the O2 Home page(file:src/main/resources/features/02_Image_Search_UI.feature:9)\n",
-              "duration": 1621688,
-              "status": "failed"
-            },
-            "line": 9,
-            "name": "that I am starting at the O2 Home page",
-            "match": {
-              "location": "Image_Search_UI_StepDef.groovy:46"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 3689,
-              "status": "skipped"
-            },
-            "line": 10,
-            "name": "the Map button is clicked",
-            "match": {
-              "location": "Image_Search_UI_StepDef.groovy:62"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2189,
-              "status": "skipped"
-            },
-            "line": 11,
-            "name": "the Search page is loaded",
-            "match": {
-              "location": "Image_Search_UI_StepDef.groovy:52"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@o2_ui_search"
-          }
-        ]
-      }
-    ],
-    "name": "O2MapUserInterface",
-    "description": "  As an analyst I need to be able to discover imagery in a user interface to choose for analysis",
-    "id": "o2mapuserinterface",
-    "keyword": "Feature",
-    "uri": "file:src/main/resources/features/02_Image_Search_UI.feature",
-    "tags": [
-      {
-        "name": "@o2_ui_search",
         "type": "Tag",
         "location": {
           "line": 1,
