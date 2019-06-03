@@ -4,9 +4,7 @@
 package omar.cucumber.frontend.test
 
 class Application {
-
     static void main(String[] args) {
-
         if (System.getenv("runEnv") == "local")
         {
             CucumberTest frontend = new CucumberTest()
